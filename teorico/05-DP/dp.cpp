@@ -63,6 +63,8 @@ int knap() {
     vector<int> w = {3, 4, 2, 6};
     vector<int> v = {4, 5, 3, 7};
     vector<int> knapsack(W + 1);
+    // v = {2 3 5 7}
+    // w = {1 2 3 4}
     for (int i = 0; i < n; ++i) {
         for (int k = W - w[i]; k >= 0; --k) {
             knapsack[k + w[i]] = max(knapsack[k + w[i]], knapsack[k] + v[i]);
